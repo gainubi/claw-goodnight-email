@@ -1,0 +1,4 @@
+interface:
+  display_name: "晚安邮箱计划"
+  short_description: "管理 90 人上限的晚安邮件订阅名单，并生成带姓名称呼的每日晚安邮件。"
+  default_prompt: "Use $claw-goodnight-email when the user wants to run or refine a ClawEmail-based goodnight email project, including handling subscribe and unsubscribe emails, enforcing the 90-person cap, replying when the list is full or information is missing, and composing warm, human, name-addressed nightly emails for active subscribers. For any real send, never call mail-cli directly. Always run ./scripts/run_nightly_sender.sh so sending uses the stable goodnight-email path."
