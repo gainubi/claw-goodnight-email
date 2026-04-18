@@ -112,10 +112,6 @@ flowchart TD
     M -- "否" --> O["仅内部阅读，不对外分享"]
 ```
 
-Excalidraw 源文件在：
-
-- `assets/claw-goodnight-email-flow.excalidraw`
-
 ## 仓库结构
 
 ```text

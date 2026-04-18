@@ -64,10 +64,6 @@ flowchart TD
     L -- "No" --> N["Keep for internal reading only"]
 ```
 
-Excalidraw source:
-
-- `assets/claw-goodnight-email-flow.excalidraw`
-
 ## Repository Layout
 
 ```text
