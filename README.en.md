@@ -27,6 +27,47 @@ The default flow is:
 
 The tone is meant to feel warm, restrained, and human rather than like a newsletter or support bot.
 
+## How To Apply For A ClawEmail Mailbox
+
+Official site:
+
+- [claw.163.com](https://claw.163.com)
+
+In many cases, ClawEmail still works like an early-access product, so the common path is:
+
+1. visit the official site and submit your application
+2. wait for an invite code or approval
+3. create your `@claw.163.com` mailbox
+4. follow the official guide to bind your agent or configure your CLI flow
+5. replace the placeholder mailbox in this repo with your real project address
+
+If you are completely new to the product, create the mailbox first and then wire this skill into your workflow.
+
+## Flow Diagram
+
+This diagram shows the full loop from mailbox application to nightly sending and story collection:
+
+```mermaid
+flowchart TD
+    A["Visit claw.163.com"] --> B["Apply / wait for invite"]
+    B --> C["Create @claw.163.com mailbox"]
+    C --> D["Bind agent or configure mail-cli"]
+    D --> E["Launch the goodnight email project"]
+    E --> F["Readers subscribe by email<br/>name + explicit opt-in"]
+    F --> G{"Reached 90-user cap?"}
+    G -- "No" --> H["Add to subscriber list"]
+    G -- "Yes" --> I["Reply that the list is full"]
+    H --> J["Generate and send nightly emails"]
+    J --> K["Invite readers to reply with a story"]
+    K --> L{"Explicit anonymous sharing consent?"}
+    L -- "Yes" --> M["Store in reusable story pool"]
+    L -- "No" --> N["Keep for internal reading only"]
+```
+
+Excalidraw source:
+
+- `assets/claw-goodnight-email-flow.excalidraw`
+
 ## Repository Layout
 
 ```text
